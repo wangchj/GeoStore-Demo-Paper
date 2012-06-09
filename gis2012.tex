@@ -1,0 +1,56 @@
+\documentclass{sig-alternate}
+%\usepackage{graphicx}
+
+\begin{document}
+
+\title{Geo-Store: A Geospatial-Enabled SPARQL Evaluation Engine}
+
+\numberofauthors{2}
+\author{
+% 1st. author
+\alignauthor
+Chih-Jye Wang\\
+    \affaddr{Department of CSSE}\\
+    \affaddr{Auburn University}\\
+    \affaddr{Auburn, AL, USA}\\
+    \email{wangchj@auburn.edu}
+% 2nd. author
+\alignauthor
+Wei-Shinn Ku\\
+    \affaddr{Department of CSSE}\\
+    \affaddr{Auburn University}\\
+    \affaddr{Auburn, AL, USA}\\
+    \email{weishinn@auburn.edu}
+}
+
+\conferenceinfo{GIS'12,} {November 6-9, 2012. Redondo Beach, CA,
+USA}\CopyrightYear{2012}
+
+\maketitle
+
+\begin{abstract}
+Geo-Store is a geospatial data management system for data expressed in the resource description framework (RDF). Our system implements common spatial query types in terms of SPARQL query filters, which allow user to perform query operations based on spatial relationships. To efficiently evaluating spatial queries, our system implements spatial-aware hashing for geographic data. Geospatial data management in semantic web data is an emerging research field, and our system shows the advantages of integrating GIS with semantic web. For more information, our system can be accessed at http://ilab.auburn.edu/geostore.
+\end{abstract}
+
+% A category with the (minimum) three required fields
+\category{H.4}{Information Systems Applications}{Miscellaneous}
+%A category including the fourth, optional field follows...
+\category{D.2.8}{Software Engineering}{Metrics}[complexity measures, performance measures]
+
+\terms{Theory}
+
+\keywords{ACM proceedings, \LaTeX, text tagging} % NOT required for Proceedings
+
+\input{intro}
+%\input{related_works}
+\input{design}
+\input{conclusion}
+
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+\bibliographystyle{abbrv}
+\bibliography{gis2012}
+\balancecolumns
+\end{document}

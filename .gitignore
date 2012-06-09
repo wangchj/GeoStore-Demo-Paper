@@ -1,0 +1,11 @@
+.dropbox
+*.aux
+*.bak
+*.bbl
+*.blg
+*.dvi
+*.log
+*.pdf
+*.sav
+
+desktop.ini

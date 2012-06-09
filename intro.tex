@@ -1,0 +1,24 @@
+\section{Introduction}
+
+%One of the values of the Hypertext Transfer Protocol (HTTP) often known as the World
+%Wide Web is that one document is linked to other documents and relevant information
+%can be obtained through the links. Similarly, the semantic web is a relatively new
+%field of research and a fledgling set of standards that attempts to create a web of
+%linked data in standardized format to help machine readability and processing. The
+%web and the semantic web are tightly woven due to that much of semantic data are
+%existing data on the web migrated to the new format or obtained by annotating
+%the existing web with semantic information .
+%
+%Much of the semantic web data describe geospatial information, such as location of
+%places, and geospatial information system that access this information is able to
+%perform
+%
+%---
+
+Semantic web is a fledgling field of research and set of standards to create a web of machine readable and processable data. The strength of this linked data is that, like the existing web, each piece of information can be linked to other pieces of information each identified by a unique identifier. For example, John could publish his information in the Friend Of A Friend\footnote{http://www.foaf-project.org/} (FOAF) format that is easily readable by machines. John's information may contain his basic information such as name and birthday; in addition, his information may also contain links to his friends in FOAF format, as well as things he like, such as a movie, which could also be uniquely identified and precisely described in semantic format\cite{lee:semantic_web}. In this example, a semantic aware application that has the identifier of John could retrieve information such as ``find all the movies liked by friends of John."
+
+Due to recent research effort and growth, much of the semantic data describe geospatial entities, such as location and geographic extend of objects. Geospatial information systems that access semantic data can make powerful inference based on spatial and non-spatial information from various source and not limited to data of only certain domains. For example, to find a location for a new fast food restaurant, a location planning software needs to find name and location of near by restaurants as well as other types of point of interest, such as schools and shopping malls, within 5 kilometers of radius of candidate locations. The application pulls information from various sources and determines the optimal location. Despite the growth of semantic web data, it is an ongoing research to best manage and query geospatial semantic data to support upcoming applications.
+
+Resource Description Framework (RDF) is a framework for describing entities (also known as \emph{resources} in semantic jargon) in semantic web format. Each property of an entity is described as a triple (S, P, O) consisting a subject, which denotes the entity, a predicate, denoting a property of the entity, and an object, the value of the property. Object of a triple can be either a literal or the subject of another triple (or the identifier of an entity) creating a link between the entities. The linking between entities forms a graph. A system that manages and control access to a set of triple is often called a \emph{triple store}.
+
+The purpose of this paper is to demonstrate Geo-Store~\cite{journals/internet/KuCWL}, a geospatial-enabled triple store. The system implements spatial query filters, which allow user to integrate spatial relationships into SPARQL queries. The system utilizes spatial-aware hashing to efficiently implement these spatial features. In addition, the system provides a query builder for the user to easily compose geospatial queries. Our system utilizes spatial aware indexing to facilitate efficient evaluation of spatial filters. The system is built on top of RDF-3X~\cite{DBLP:journals/vldb/NeumannW10}, a scalable RDF management system. 
