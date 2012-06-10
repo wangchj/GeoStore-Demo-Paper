@@ -3,9 +3,9 @@
 
 \begin{document}
 
-\title{Geo-Store: A Geospatial-Enabled SPARQL Evaluation Engine}
+\title{Geo-Store: A Spatially-Aware SPARQL Evaluation Engine (Demo Paper)}
 
-\numberofauthors{2}
+\numberofauthors{3}
 \author{
 % 1st. author
 \alignauthor
@@ -21,6 +21,12 @@ Wei-Shinn Ku\\
     \affaddr{Auburn University}\\
     \affaddr{Auburn, AL, USA}\\
     \email{weishinn@auburn.edu}
+\alignauthor
+Haiquan Chen\\
+    \affaddr{Department of Math and CS}\\
+    \affaddr{Valdosta State University}\\
+    \affaddr{Valdosta, GA, USA}\\
+    \email{hachen@valdosta.edu}
 }
 
 \conferenceinfo{GIS'12,} {November 6-9, 2012. Redondo Beach, CA,
@@ -29,27 +35,40 @@ USA}\CopyrightYear{2012}
 \maketitle
 
 \begin{abstract}
-Geo-Store is a geospatial data management system for data expressed in the resource description framework (RDF). Our system implements common spatial query types in terms of SPARQL query filters, which allow user to perform query operations based on spatial relationships. To efficiently evaluating spatial queries, our system implements spatial-aware hashing for geographic data. Geospatial data management in semantic web data is an emerging research field, and our system shows the advantages of integrating GIS with semantic web. For more information, our system can be accessed at http://ilab.auburn.edu/geostore.
+Nowadays, how to utilize spatial data on the semantic web has
+attracted more and more interests from researcher due to the
+rapidly increasing applications on geographic information, e.g.,
+location-based services (LBS). However, there are currently
+limited solutions providing efficient management of spatial data
+on the semantic web. In this demonstration, we present Geo-Store,
+a novel spatially-aware data management system built on the
+state-of-art RDF triple store. By the augmentation of the standard
+SPARQL language with spatial query filters, Geo-Store is able to
+process complex queries with common spatial constraints.  Those
+spatial filters are further analyzed and evaluated based on the
+Spatially-Aware Hashing (SAH). In SAH, spatial data are
+pre-processed and encoded with their Hilbert values by using
+space-filling curves, resulting in a higher query processing
+efficiency than the existing triple store approaches, with no
+compromise in accuracy. Our system can be accessed at
+http://ilab.auburn.edu/geostore.
 \end{abstract}
 
-% A category with the (minimum) three required fields
-\category{H.4}{Information Systems Applications}{Miscellaneous}
-%A category including the fourth, optional field follows...
-\category{D.2.8}{Software Engineering}{Metrics}[complexity measures, performance measures]
 
-\terms{Theory}
+\category{H.2.8}{Database Management}{Database
+Application}[spatial databases and GIS]
 
-\keywords{ACM proceedings, \LaTeX, text tagging} % NOT required for Proceedings
+\terms{Algorithms and Experimentation}
+
+\keywords{Location-based services, space-filling curves, the
+Semantic Web}
 
 \input{intro}
-%\input{related_works}
 \input{design}
+\input{demo}
 \input{conclusion}
 
-%
-% The following two commands are all you need in the
-% initial runs of your .tex file to
-% produce the bibliography for the citations in your paper.
+%\small
 \bibliographystyle{abbrv}
 \bibliography{gis2012}
 \balancecolumns
